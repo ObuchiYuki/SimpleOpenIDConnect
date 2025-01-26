@@ -7,9 +7,23 @@
 
 import Foundation
 
-public enum OIDCError: Error {
-    case invalidURL
+public enum OIDCError: Error, LocalizedError {
     case missingAuthorizationCode
-    case networkError(URLResponse)
-    case decodeError
+    case networkError(URLResponse, Data)
+    case decodeError(Data)
+    
+    public var errorDescription: String? {
+        switch self {
+        case .missingAuthorizationCode:
+            return "Missing authorization code in callback URL"
+        case .networkError(_, let data):
+            if let errorDescription = String(data: data, encoding: .utf8) {
+                return "Network error: \(errorDescription)"
+            } else {
+                return "Network error"
+            }
+        case .decodeError:
+            return "Decode error"
+        }
+    }
 }

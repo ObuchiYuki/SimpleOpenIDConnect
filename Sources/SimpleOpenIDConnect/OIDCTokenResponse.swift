@@ -11,7 +11,6 @@ public struct OIDCTokenResponse: Decodable {
     public let accessToken: String
     public let refreshToken: String?
     public let idToken: String?
-    
     public let refreshTokenExpireTime: Int?
     
     enum CodingKeys: String, CodingKey {
@@ -24,11 +23,13 @@ public struct OIDCTokenResponse: Decodable {
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
-        guard let at = try container.decodeIfPresent(String.self, forKey: .accessToken),
-              !at.isEmpty else {
-            throw OIDCError.decodeError
+        guard let accessToken = try container.decodeIfPresent(String.self, forKey: .accessToken) else {
+            throw DecodingError.dataCorruptedError(forKey: .accessToken, in: container, debugDescription: "Access token is missing")
         }
-        self.accessToken = at
+        guard !accessToken.isEmpty else {
+            throw DecodingError.dataCorruptedError(forKey: .accessToken, in: container, debugDescription: "Access token is empty")
+        }
+        self.accessToken = accessToken
         
         self.refreshToken = try container.decodeIfPresent(String.self, forKey: .refreshToken)
         self.idToken      = try container.decodeIfPresent(String.self, forKey: .idToken)

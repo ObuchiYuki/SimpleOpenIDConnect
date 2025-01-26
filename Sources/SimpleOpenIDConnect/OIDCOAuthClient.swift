@@ -32,11 +32,11 @@ final public class OIDCOAuthClient {
         let (data, response) = try await URLSession.shared.data(for: request)
         
         guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
-            throw OIDCError.networkError(response)
+            throw OIDCError.networkError(response, data)
         }
         
         guard let tokenResponse = try? JSONDecoder().decode(OIDCTokenResponse.self, from: data) else {
-            throw OIDCError.decodeError
+            throw OIDCError.decodeError(data)
         }
                 
         return tokenResponse
@@ -63,11 +63,11 @@ final public class OIDCOAuthClient {
         let (data, response) = try await URLSession.shared.data(for: request)
         
         guard let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
-            throw OIDCError.networkError(response)
+            throw OIDCError.networkError(response, data)
         }
         
         guard let tokenResponse = try? JSONDecoder().decode(OIDCTokenResponse.self, from: data) else {
-            throw OIDCError.decodeError
+            throw OIDCError.decodeError(data)
         }
         return tokenResponse
     }

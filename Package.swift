@@ -5,17 +5,17 @@ import PackageDescription
 
 let package = Package(
     name: "SimpleOpenIDConnect",
+    platforms: [
+        .iOS(.v13),
+        .macOS(.v10_15),
+        .watchOS(.v6),
+        .tvOS(.v13)
+    ],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
-        .library(
-            name: "SimpleOpenIDConnect",
-            targets: ["SimpleOpenIDConnect"]),
+        .library(name: "SimpleOpenIDConnect", targets: ["SimpleOpenIDConnect"]),
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
-        .target(
-            name: "SimpleOpenIDConnect"),
+        .target(name: "SimpleOpenIDConnect"),
         .testTarget(
             name: "SimpleOpenIDConnectTests",
             dependencies: ["SimpleOpenIDConnect"]
