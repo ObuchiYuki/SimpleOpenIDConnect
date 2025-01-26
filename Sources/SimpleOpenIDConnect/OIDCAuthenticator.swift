@@ -7,7 +7,7 @@
 
 import Foundation
 
-final public class OIDCAuthenticator {
+final public class OIDCAuthenticator: Sendable {
     public let pkce: PKCE
     
     public let authorizationBaseURL: URL

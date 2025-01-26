@@ -7,7 +7,7 @@
 
 import Foundation
 
-final public class OIDCOAuthClient {
+final public class OIDCOAuthClient: Sendable {
     private let pkce: PKCE
         
     public init(pkce: PKCE) {

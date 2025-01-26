@@ -8,7 +8,7 @@
 import Foundation
 import CryptoKit
  
-public struct PKCE {
+public struct PKCE: Sendable {
     public typealias Verifier = String
     
     public typealias Challenge = String

@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum OIDCError: Error, LocalizedError {
+public enum OIDCError: Error, LocalizedError, Sendable {
     case missingAuthorizationCode
     case networkError(URLResponse, Data)
     case decodeError(Data)

@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct OIDCTokenResponse: Decodable {
+public struct OIDCTokenResponse: Decodable, Sendable {
     public let accessToken: String
     public let refreshToken: String?
     public let idToken: String?
