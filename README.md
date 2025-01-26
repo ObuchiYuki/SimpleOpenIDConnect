@@ -26,7 +26,7 @@ Then add this line to your target’s dependencies in your **Package.swift** (if
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/yourusername/SimpleOpenIDConnect.git", from: "1.0.0")
+    .package(url: "https://github.com/ObuchiYuki/SimpleOpenIDConnect.git", from: "1.0.0")
 ],
 targets: [
     .target(
