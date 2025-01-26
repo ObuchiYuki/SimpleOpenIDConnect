@@ -2,6 +2,8 @@
 
 en: [English](README.md) | ja: [日本語](README_ja.md)
 
+![Swift](https://img.shields.io/badge/Swift-6.0-orange) ![Platforms](https://img.shields.io/badge/Platforms-iOS%20%7C%20macOS%20%7C%20watchOS%20%7C%20tvOS-lightgrey) ![License](https://img.shields.io/badge/License-MIT-blue)
+
 **SimpleOpenIDConnect** is a Swift package that simplifies [OpenID Connect (OIDC)](https://openid.net/connect/) authentication by handling:
 
 - **Authorization Code Flow with PKCE**  

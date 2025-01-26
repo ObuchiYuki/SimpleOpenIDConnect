@@ -1,5 +1,7 @@
 # SimpleOpenIDConnect
 
+![Swift](https://img.shields.io/badge/Swift-6.0-orange) ![Platforms](https://img.shields.io/badge/Platforms-iOS%20%7C%20macOS%20%7C%20watchOS%20%7C%20tvOS-lightgrey) ![License](https://img.shields.io/badge/License-MIT-blue)
+
 en: [English](README.md) | ja: [日本語](README_ja.md)
 
 **SimpleOpenIDConnect** は、[OpenID Connect (OIDC)](https://openid.net/connect/) での認証をシンプルに実装するための Swift パッケージです。以下の機能をサポートしています:
