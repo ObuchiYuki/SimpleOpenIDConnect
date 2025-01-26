@@ -26,7 +26,7 @@ iOS、macOS、watchOS、tvOS に対応しています。
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/yourusername/SimpleOpenIDConnect.git", from: "1.0.0")
+    .package(url: "https://github.com/ObuchiYuki/SimpleOpenIDConnect.git", from: "1.0.0")
 ],
 targets: [
     .target(
