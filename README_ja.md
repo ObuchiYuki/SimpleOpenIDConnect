@@ -1,5 +1,7 @@
 # SimpleOpenIDConnect
 
+en: [English](README.md) | ja: [日本語](README_ja.md)
+
 **SimpleOpenIDConnect** は、[OpenID Connect (OIDC)](https://openid.net/connect/) での認証をシンプルに実装するための Swift パッケージです。以下の機能をサポートしています:
 
 - **PKCE を用いた Authorization Code Flow**  
