@@ -1,5 +1,7 @@
 # SimpleOpenIDConnect
 
+japanese version: [README_ja.md](README_ja.md)
+
 **SimpleOpenIDConnect** is a Swift package that simplifies [OpenID Connect (OIDC)](https://openid.net/connect/) authentication by handling:
 
 - **Authorization Code Flow with PKCE**  
